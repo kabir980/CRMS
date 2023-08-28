@@ -30,6 +30,14 @@ public class LoginController implements IRootController {
         loginIcon.fitWidthProperty().bind(rootPane.widthProperty());
         loginIcon.fitHeightProperty().bind(rootPane.heightProperty());
 
+        loginIcon.fitWidthProperty().bind(rootPane.widthProperty());
+        loginIcon.fitHeightProperty().bind(rootPane.heightProperty());
+
+    }
+    @FXML
+    private void handleWindowResizing() {
+        loginIcon.fitWidthProperty().bind(rootPane.widthProperty());
+        loginIcon.fitHeightProperty().bind(rootPane.heightProperty());
     }
 
     public void setMainApp(MainApplication mainApp) {
