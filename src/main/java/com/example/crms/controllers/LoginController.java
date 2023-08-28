@@ -25,21 +25,6 @@ public class LoginController implements IRootController {
     @FXML
     private AnchorPane rootPane;
 
-    @FXML
-    private void initialize() {
-        loginIcon.fitWidthProperty().bind(rootPane.widthProperty());
-        loginIcon.fitHeightProperty().bind(rootPane.heightProperty());
-
-        loginIcon.fitWidthProperty().bind(rootPane.widthProperty());
-        loginIcon.fitHeightProperty().bind(rootPane.heightProperty());
-
-    }
-    @FXML
-    private void handleWindowResizing() {
-        loginIcon.fitWidthProperty().bind(rootPane.widthProperty());
-        loginIcon.fitHeightProperty().bind(rootPane.heightProperty());
-    }
-
     public void setMainApp(MainApplication mainApp) {
         this.mainApp = mainApp;
     }
@@ -49,8 +34,10 @@ public class LoginController implements IRootController {
         String username = txf_username.getText();
         String password = txf_password.getText();
 
+
+
         if (username.isEmpty() || password.isEmpty()) {
-            hintLabel.setText("Please enter the username or password");
+            hintLabel.setText("Please enter the email or password");
         }
         if (!username.isBlank() || !password.isBlank()) {
             hintLabel.setText("Thank you so much");

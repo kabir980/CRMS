@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crms.controllers.LoginController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,7 +17,7 @@
             </ImageView>
             <HBox alignment="CENTER" prefHeight="26.0" prefWidth="600.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="33.0" prefWidth="315.0" textFill="#d40d0d">
+                  <Label fx:id="hintLabel" alignment="CENTER" prefHeight="33.0" prefWidth="315.0" textFill="#d40d0d">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -42,7 +35,7 @@
                   <Insets top="13.0" />
                </VBox.margin>
                <children>
-                  <TextField alignment="CENTER" prefHeight="53.0" prefWidth="260.0" promptText="E-mail" style="-fx-border-color: #000000;">
+                  <TextField fx:id="txf_username" alignment="CENTER" prefHeight="53.0" prefWidth="260.0" promptText="E-mail" style="-fx-border-color: #000000;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -54,14 +47,14 @@
                   <Insets top="13.0" />
                </VBox.margin>
                <children>
-                  <PasswordField alignment="CENTER" prefHeight="53.0" prefWidth="260.0" promptText="password" style="-fx-border-color: #000000;">
+                  <PasswordField fx:id="txf_password" alignment="CENTER" prefHeight="53.0" prefWidth="260.0" promptText="password" style="-fx-border-color: #000000;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </PasswordField>
                </children>
             </HBox>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="Login">
+            <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="95.0" text="Login">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
